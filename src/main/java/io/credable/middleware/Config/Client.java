@@ -10,9 +10,9 @@ import io.credable.middleware.data.external.transactions.TransactionsResponse;
 
 public class Client extends WebServiceGatewaySupport{
 
-    public List<TransactionData> getTransactions(String customer_number){
+    public List<TransactionData> getTransactions(String customerNumber){
         TransactionsRequest request = new TransactionsRequest();
-        request.setCustomerNumber(customer_number);
+        request.setCustomerNumber(customerNumber);
 
         TransactionsResponse response = (TransactionsResponse) getWebServiceTemplate()
             .marshalSendAndReceive("https://trxapitest.credable.io/service/transaction-data", request);
