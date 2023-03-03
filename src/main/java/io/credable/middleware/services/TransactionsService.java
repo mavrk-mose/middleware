@@ -12,7 +12,10 @@ import io.credable.middleware.data.external.transactions.TransactionData;
 
 @Service
 public class TransactionsService {
-
+    /**
+     * This method controls the GEt REQUEST FOR TRAS
+     * @return List of transactions
+     */
     public ResponseEntity<List<TransactionData>> getTransactions (String customerNumber) {
         try {
             AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
